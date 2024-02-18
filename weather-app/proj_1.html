@@ -14,6 +14,9 @@
             <input type="text" placeholder="Enter city name" spellcheck="false">
             <button><img src="images/search.png"></button>
         </div>
+        <div class="error">
+            <p>Invalid city name</p>
+        </div>
         <div class="weather">
             <img src="images/rain.png" class="weather-icon">
             <h1 class="temp">22°c</h1>
@@ -37,23 +40,7 @@
         </div>
     </div>
 
-
-    <script>
-        const apiKey = "1de05946cc95b108c6207aa017c7038a";
-        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=bangalore";
-
-
-        async function checkWeather() {
-            const response = await fetch(apiUrl + `&appid=${apiKey}`);
-            var data = await response.json();
-
-            console.log(data);
-
-            document.querySelector(".city").innerHTML = 
-        }
-
-        checkWeather();
-    </script>
+    <script src="proj_1.js"></script>
 
 </body>
 
